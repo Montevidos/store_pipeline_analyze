@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: mart_states_reviews
+    description: "This table contains average review scores by state."
+  - name: mart_product_category_sales
+    description: "This table contains total sales by product category."
+    tests:
+      - unique:
+          column_name: PRODUCT_CATEGORY_NAME
+      - not_null:
+          column_name: PRODUCT_CATEGORY_NAME
+  - name: mart_city_sales
+    description: "This table contains total orders by customer geolocation."    
+    tests:
+      - unique:
+          column_name: customer_state
+      - not_null:
+          column_name: customer_state
+
+  - name: mart_seller_sales
+    description: "This table contains total sales by seller."
+    tests:
+      - unique:
+          column_name: seller_id
+      - not_null:
+          column_name: seller_id
+  - name: mart_product_category_sales
+    description: "This table contains total sales by product category."
+    tests:
+      - unique:
+          column_name: product_id
+      - not_null:
+          column_name: product_id
+

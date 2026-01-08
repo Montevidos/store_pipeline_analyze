@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: prep_reviews_geo
+    description: "This table contains aggregated review scores by customer country."
+    tests:
+      - unique:
+          column_name: order_id
+      - not_null:
+          column_name: order_id
+  - name: prep_products_sales_sellers
+    description: "This table contains total sales by product and seller."
+    tests:
+      - unique:
+          column_name: product_id
+      - not_null:
+          column_name: product_id
+  - name: prep_order_customers_geolocation
+    description: "This table contains order details enriched with customer geolocation data."
+    tests:
+      - unique:
+          column_name: order_id
+      - not_null:
+          column_name: order_id
+  - name: prep_order_payments
+    description: "This table contains payment details for each order."
+    tests:
+      - unique:
+          column_name: order_id
+      - not_null:
+          column_name: order_id 
+

@@ -35,6 +35,9 @@ models:
     staging:
       +schema: STAGING
       +materialized: view
+    prep:
+      +schema: PREP
+      +materialized: view
     marts:
       +schema: MARTS
       +materialized: table
